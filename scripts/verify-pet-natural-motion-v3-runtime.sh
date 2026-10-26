@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-PYTHON="/Users/rene/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+PYTHON="${PYTHON:-python3}"
 ASSET_DIR="$PROJECT_DIR/desktop-dropper/assets"
 EVIDENCE_DIR="$PROJECT_DIR/artifacts/release-gate/pet-natural-motion-v3-runtime"
 APP="$PROJECT_DIR/.runtime-bin/Codex Pet 大王.app"

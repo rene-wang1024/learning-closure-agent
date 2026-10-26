@@ -3,9 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const require = createRequire(import.meta.url);
-const { chromium } = require(
-  "/Users/rene/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright"
-);
+const { chromium } = require("playwright");
 
 const baseUrl = "http://127.0.0.1:5174/";
 const outputDir = path.resolve("artifacts/release-gate/task-rail-checkpoint");

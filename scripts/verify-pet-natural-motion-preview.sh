@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-PYTHON="/Users/rene/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+PYTHON="${PYTHON:-python3}"
 EVIDENCE="$ROOT/artifacts/release-gate/pet-natural-motion-v1"
 
 "$PYTHON" "$ROOT/scripts/build-pet-natural-motion-preview.py"

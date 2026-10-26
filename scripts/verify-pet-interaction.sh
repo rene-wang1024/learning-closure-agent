@@ -1,8 +1,8 @@
 #!/bin/zsh
 set -e
 
-PROJECT_DIR="/Users/rene/Documents/学习助手"
-PYTHON="/Users/rene/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+PROJECT_DIR="${PROJECT_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
+PYTHON="${PYTHON:-python3}"
 APP_PATH="$PROJECT_DIR/.runtime-bin/Codex Pet 大王.app"
 ASSETS_DIR="$PROJECT_DIR/desktop-dropper/assets"
 EVIDENCE_DIR="$PROJECT_DIR/artifacts/release-gate/pet-interaction"
@@ -17,11 +17,12 @@ for direction in left right; do
   done
 done
 
-"$PYTHON" - <<'PY'
+PROJECT_DIR="$PROJECT_DIR" "$PYTHON" - <<'PY'
+import os
 from pathlib import Path
 from PIL import Image
 
-root = Path("/Users/rene/Documents/学习助手")
+root = Path(os.environ["PROJECT_DIR"])
 for direction in ("left", "right"):
     frames = []
     for index in range(8):

@@ -241,7 +241,9 @@ For daily use on macOS, build the double-click desktop app:
 scripts/build-da-wang-app.sh
 ```
 
-This creates `/Users/rene/Desktop/大王查词.app` with a Da Wang icon. Double-clicking the app starts the backend, starts the vocab web app if needed, and opens the floating `Codex Pet · 大王`.
+This creates `~/Desktop/大王查词.app` with a Da Wang icon. Double-clicking the app starts the backend, starts the vocab web app if needed, and opens the floating `Codex Pet · 大王`.
+
+The scripts locate the project from their own folder, so the repo can live anywhere. Set `APP_PATH` to put the app somewhere other than the Desktop, and `PYTHON` to use a specific Python 3 (with Pillow) for the verification scripts.
 
 The desktop launcher uses a precompiled local `Codex Pet · 大王.app`. It rebuilds when the Pet source or packaged animation assets change, which keeps normal startup fast, reuses one Pet instance, and avoids depending on Swift compilation at every launch. The launcher waits for both the backend and web app health checks before showing the drop target.
 
