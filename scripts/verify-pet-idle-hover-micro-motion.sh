@@ -1,8 +1,8 @@
 #!/bin/zsh
 set -euo pipefail
 
-PROJECT_DIR="/Users/rene/Documents/学习助手"
-PYTHON="/Users/rene/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+PROJECT_DIR="${PROJECT_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
+PYTHON="${PYTHON:-python3}"
 ASSET_DIR="$PROJECT_DIR/desktop-dropper/assets"
 EVIDENCE_DIR="$PROJECT_DIR/artifacts/release-gate/pet-idle-hover-micro-motion"
 APP="$PROJECT_DIR/.runtime-bin/Codex Pet 大王.app"

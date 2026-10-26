@@ -1,7 +1,7 @@
 #!/bin/zsh
 set -e
 
-PROJECT_DIR="/Users/rene/Documents/学习助手"
+PROJECT_DIR="${PROJECT_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
 SOURCE="$PROJECT_DIR/desktop-dropper/LegalVocabDropper.swift"
 REMINDER_SOURCE="$PROJECT_DIR/desktop-dropper/DailyReviewReminder.swift"
 INFO_PLIST="$PROJECT_DIR/desktop-dropper/CodexPet-Info.plist"

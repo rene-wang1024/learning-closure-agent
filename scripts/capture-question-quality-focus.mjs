@@ -1,6 +1,6 @@
 import { mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { chromium } from "/Users/rene/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs";
+import { chromium } from "playwright";
 
 const outputDir = fileURLToPath(new URL("../artifacts/release-gate/question-quality-focus/", import.meta.url));
 await mkdir(outputDir, { recursive: true });

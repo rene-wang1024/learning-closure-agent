@@ -515,7 +515,7 @@
         "status": "passed",
         "confirmed_at": "2026-07-30",
         "user_feedback": "这个更像",
-        "asset_source": "/Users/rene/.codex/generated_images/019f91f8-eb2d-7d83-bf29-ae1efaa4c7e8/call_9DjEax21hs1u35VVAreuWFBz.png"
+        "asset_source": "~/.codex/generated_images/019f91f8-eb2d-7d83-bf29-ae1efaa4c7e8/call_9DjEax21hs1u35VVAreuWFBz.png"
       },
       "animation_preview_acceptance": {
         "status": "passed",
@@ -737,7 +737,7 @@
       "user_observation": "用户于 2026-07-29 明确要求：每一次任务执行严格按照 PMO skill；规则不清晰时先向用户确认。",
       "trigger_or_verification": "每次实施前执行 scope、do-not-break、风险、真实路径验收与两小时门禁检查；任何不清晰且会改变产品或数据结果的事项必须先取得用户确认。交付前运行 coverage audit 与对应 release gate，并区分 verified、awaiting user verification 和 deferred。",
       "evidence": [
-        "/Users/rene/.codex/skills/pmo-skill/SKILL.md",
+        "~/.codex/skills/pmo-skill/SKILL.md",
         "config/delivery/master-decision-ledger.json"
       ],
       "contract_ids": []

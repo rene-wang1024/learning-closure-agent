@@ -1,7 +1,7 @@
 #!/bin/zsh
 set -e
 
-PROJECT_DIR="/Users/rene/Documents/学习助手"
+PROJECT_DIR="${PROJECT_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
 LOG_DIR="$PROJECT_DIR/.runtime-logs"
 PATH="/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 

@@ -12,7 +12,11 @@ server/.env
 .env.*
 server/.env.*
 output
-artifacts
+# Release-gate evidence is generated locally; only the v2 positioning-sync record is kept in git
+artifacts/*
+!artifacts/release-gate/
+artifacts/release-gate/*
+!artifacts/release-gate/v2-positioning-sync/
 server/dist
 extension/dist
 web/dist
@@ -27,7 +31,6 @@ desktop-dropper/assets/action-sit.png
 desktop-dropper/assets/action-sleep.png
 desktop-dropper/assets/dropper-source.png
 desktop-dropper/assets/references/
-desktop-dropper/assets/*-master-chroma.png
 desktop-dropper/assets/state-curious-left-frame-*.png
 desktop-dropper/assets/state-curious-right-frame-*.png
 
